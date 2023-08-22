@@ -1,0 +1,5 @@
+outs:
+- md5: 457bfa7d96833e4b7973a4d152bb6558
+  size: 92473
+  hash: md5
+  path: opening_gross.csv
