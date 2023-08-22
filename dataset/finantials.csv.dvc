@@ -1,0 +1,5 @@
+outs:
+- md5: 142a830c49bcf7ed6ff07695f6489df5
+  size: 618225
+  hash: md5
+  path: finantials.csv
