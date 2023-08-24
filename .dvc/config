@@ -1,6 +1,6 @@
 [core]
     autostage = true
 ['remote "dataset-track"']
-    url = D:\learning\self\platzi\path\data-science\curso-introduccion-despliegue-modelos-ml\storage\dataset
+    url = gdrive://1RSnNI0tERNriDerwFtMhl0TTcAEfTXJK/dataset
 ['remote "model-track"']
-    url = D:\learning\self\platzi\path\data-science\curso-introduccion-despliegue-modelos-ml\storage\model
+    url = gdrive://1RSnNI0tERNriDerwFtMhl0TTcAEfTXJK/model
