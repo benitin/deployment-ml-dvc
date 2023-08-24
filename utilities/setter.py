@@ -1,11 +1,12 @@
 import os 
 from base64 import b64decode, b64encode
+import sys
 
 def main():
     key = os.environ.get('SERVICE_ACCOUNT_KEY')
-    with open('path.json', 'w') as json_file:
+    with open('credential.json', 'w') as json_file:
         json_file.write(b64decode(key).decode())
-        print(os.path.realpath('path.json'))
+        print(os.path.realpath('credential.json'))
 
 def encode(path):
     with open(path, 'r') as json_file:
@@ -14,4 +15,4 @@ def encode(path):
 
 if __name__ == '__main__':
     main()
-    #encode('my_credential_path')
+    #encode(sys.argv[1])
