@@ -19,7 +19,6 @@ jobs:
           pip install -r requirements.txt
       - name: Test API 
         run: | 
-          export GDRIVE_CREDENTIALS_DATA=$(python utilities/setter.py)
           python utilities/generate_key.py
           dvc pull model/model.pkl -r model-track
           pytest test/test.py
