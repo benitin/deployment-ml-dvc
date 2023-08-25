@@ -20,5 +20,6 @@ jobs:
       - name: Test API 
         run: | 
           python utilities/generate_key.py
+          dvc remote modify model-track gdrive_service_account_json_file_path credentials.json
           dvc pull model/model.pkl -r model-track
           pytest test/test.py
