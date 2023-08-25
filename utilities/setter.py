@@ -13,6 +13,16 @@ def encode(path):
         encoded = b64encode(json_file.read().encode())
     print(encoded)
 
+def get_credentials(file_path):
+    key = None
+    with open(file_path, 'r') as json_file:
+        key = json_file.read()
+    
+    key = b64decode(key.encode())
+
+    print(key)
+
 if __name__ == '__main__':
-    main(file_path='credentials.json')
+    get_credentials('credentials.json')
+    #main(file_path='credentials.json')
     #encode(sys.argv[1])
