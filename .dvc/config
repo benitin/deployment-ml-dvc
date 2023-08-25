@@ -5,8 +5,12 @@
     gdrive_use_service_account = true
     gdrive_service_account_json_file_path = ../credentials.json
     gdrive_acknowledge_abuse = true
+    gdrive_client_id = 71966968065-ni1g426sj52bmja3kabml1oenkk4l1ej.apps.googleusercontent.com
+    gdrive_client_secret = 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
 ['remote "model-track"']
     url = gdrive://1RSnNI0tERNriDerwFtMhl0TTcAEfTXJK/model
     gdrive_use_service_account = true
     gdrive_service_account_json_file_path = ../credentials.json
     gdrive_acknowledge_abuse = true
+    gdrive_client_id = 71966968065-ni1g426sj52bmja3kabml1oenkk4l1ej.apps.googleusercontent.com
+    gdrive_client_secret = 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
