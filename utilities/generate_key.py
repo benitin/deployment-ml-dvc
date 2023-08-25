@@ -9,10 +9,10 @@ def main(json_file_name):
         json_file.write(b64decode(key).decode())
         json_file.flush()
 
-    with open(json_file_name, 'r') as json_file:
-        print('GDrive Credentials:', json_file.read())
+    #with open(json_file_name, 'r') as json_file:
+    #    print('GDrive Credentials:', json_file.read())
     
-    print('realpath', os.path.realpath(json_file_name))
+    #print('realpath', os.path.realpath(json_file_name))
 
 if __name__=='__main__':
     main('credentials.json')    

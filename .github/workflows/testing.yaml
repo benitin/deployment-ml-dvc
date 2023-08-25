@@ -20,8 +20,7 @@ jobs:
       - name: Test API 
         run: | 
           python utilities/generate_key.py
-          export GDRIVE_CREDENTIALS_DATA=$(python utilities/setter.py)
+          export GDRIVE_CREDENTIALS_DATA=${{ secrets.GDRIVE_CREDENTIALS_DATA }}
           dvc remote modify model-track gdrive_service_account_json_file_path credentials.json
-          dvc remote modify model-track gdrive_service_account_user_email 'benitognet@gmail.com'
           dvc pull model/model.pkl -r model-track
           pytest test/test.py
