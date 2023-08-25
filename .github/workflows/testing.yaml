@@ -22,5 +22,7 @@ jobs:
           python utilities/generate_key.py
           export GDRIVE_CREDENTIALS_DATA=${{ secrets.GDRIVE_CREDENTIALS_DATA }}
           dvc remote modify model-track gdrive_service_account_json_file_path credentials.json
+          realpath -s credentials.json
+          dvc remote list
           dvc pull model/model.pkl -r model-track
           pytest test/test.py
