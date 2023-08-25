@@ -7,3 +7,4 @@ report.txt
 __pycache__/
 .pytest_cache/
 terraform/
+gdrive.txt
