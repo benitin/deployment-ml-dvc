@@ -19,9 +19,10 @@ jobs:
           pip install dvc dvc-gdrive
           pip install -r requirements.txt
       - name: Test API 
+        env: 
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
         run: | 
           python utilities/generate_key.py
           dvc pull  model/model.pkl -r model-track
           pytest test/test.py
-        env: 
-          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+        
