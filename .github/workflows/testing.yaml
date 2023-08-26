@@ -6,6 +6,7 @@ jobs:
     env:
       SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
     steps:
+      - uses: iterative/setup-dvc@v1
       - name: Checkout the repo 
         uses: actions/checkout@v3
       - name: Creating and activating virtualenv
@@ -20,9 +21,7 @@ jobs:
       - name: Test API 
         run: | 
           python utilities/generate_key.py
-          export GDRIVE_CREDENTIALS_DATA=$(python utilities/setter.py)
-          echo $GDRIVE_CREDENTIALS_DATA
-          realpath -s credentials.json
-          dvc remote list
-          dvc pull model/model.pkl -r model-track
+          dvc pull  model/model.pkl -r model-track
           pytest test/test.py
+        env: 
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
